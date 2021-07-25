@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+   background-color: darkslategray;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container{
+    background-color: rgb(29, 24, 24);
+    width: 75px;
+    height: 220px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 9px; /*padding for circle written in container because there is no text inside circle to do it*/
+}
+
+.circle{
+    background-color:black;
+    width:60px;
+    height: 60px;
+    border-radius: 50%;
+    
+}
+
+.circle:after{
+    content: '';
+   /* background-color: #fff; back ground color removed after border-rignt property */
+    position: absolute;
+    border-right:5px solid rgba(255, 255, 255, .6); /*.6 is opacity here*/
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+   margin-top: 10px;
+   margin-left: 10px;
+}
+
+
+.circle.red{
+    background-color: red;
+    box-shadow: 0 0 20px rgb(240, 86, 65)
+}
+
+.circle.yellow{
+    background-color: yellow;
+    box-shadow: 0 0 20px rgb(240, 229, 86)
+
+}
+
+.circle.green{
+    background-color: green;
+    box-shadow: 0 0 20px rgb(99, 240, 86)
+
+}
+
+
+/*
+* {
+    box-sizing: border-box;
+}
+
+it Include padding and border in the element's total width and height:
+
+-------------------------
+What is The Viewport?
+The viewport is the user's visible area of a web page.
+
+The viewport varies with the device, and will be smaller on a mobile phone than on a computer screen.
+
+
+Viewport Width (vw) – A percentage of the full viewport width. 10vw will resolve to 10% of the current viewport width, or 48px on a phone that is 480px wide. The difference between % and vw is most similar to the difference between em and rem. A % length is relative to local context (containing element) width, while a vw length is relative to the full width of the browser window.
+Viewport Height (vh) – A percentage of the full viewport height. 10vh will resolve to 10% of the current viewport height.
+
+https://css-tricks.com/fun-viewport-units/
+
+
+*/
